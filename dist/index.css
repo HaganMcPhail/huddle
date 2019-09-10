@@ -24,7 +24,7 @@ body {
 .bg-container .white-bg {
   height: 70vw;
   width: 70vw;
-  background-color: #ffffff;
+  background-color: white;
   position: absolute;
   top: 25vw;
   left: 5vw;
@@ -85,4 +85,12 @@ body {
 }
 .container section .hero-text h2 {
   font-size: 1.5rem;
+}
+.container section .hero-text a {
+  background-color: white;
+  color: black;
+  padding: 1em 1.5em;
+  height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
 }

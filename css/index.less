@@ -1,9 +1,9 @@
-$lightgray: #f7f9fd;
-$pink: #ff52bf;
-$violet: #9a52ff;
+@light-gray: #f7f9fd;
+@pink: #ff52bf;
+@violet: #9a52ff;
 
 body {
-  background-color: $light-gray;
+  background-color: @light-gray;
 }
 .bg-container {
   position: absolute;
@@ -21,14 +21,14 @@ body {
     transform: rotate(45deg);
     border-radius: 10%;
     z-index: 3;
-    background-image: linear-gradient(to right, $pink, $pink);
+    background-image: linear-gradient(to right, @pink, @violet);
     overflow: hidden;
   }
 
   .white-bg {
     height: 70vw;
     width: 70vw;
-    background-color: #ffffff;
+    background-color: white;
     position: absolute;
     top: 25vw;
     left: 5vw;
