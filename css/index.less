@@ -24,18 +24,18 @@ body {
   overflow: hidden;
   z-index: 1;
   width: 100%;
-  min-height: 150vh;
+  min-height: 150%;
   div {
     position: absolute;
     border-radius: 7%;
     overflow: hidden;
     &.colored-bg {
       transform: rotate(55deg);
-      height: 100vw;
-      width: 80vw;
+      height: 100%;
+      width: 80%;
       background-color: @violet;
-      top: -40vw;
-      left: 50vw;
+      top: -40%;
+      left: 50%;
       z-index: 3;
       -webkit-animation: teeter 10s infinite linear;
       background-image: linear-gradient(to bottom, @pink, @violet);
@@ -43,18 +43,24 @@ body {
     }
 
     &.white-bg {
-      height: 100vw;
-      width: 60vw;
+      height: 100%;
+      width: 60%;
       background-color: white;
       transform: rotate(70deg);
-      top: 4vw;
-      left: 15vw;
+      top: 4%;
+      left: 15%;
       z-index: 2;
       //-webkit-animation: teeter 10s infinite linear;
       box-shadow: 50px 35px 30px -50px @mid-gray;
     }
   }
 }
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
 header {
   position: relative;
   z-index: 10;
@@ -102,71 +108,88 @@ main {
   &.half {
     max-width:1100px;
     flex-direction: column;
-    section.hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .hero-img {
-        width: 75%;
-      }
-      .hero-text {
-        width: 75%;
-        h2 {
-          font-size: 1.5rem;
-        }
-        text-align: center;
-        padding: 5rem 0;
-        p {
-          line-height: 2rem;
-          padding-bottom: 1.5rem;
-        }
-        a {
-          background-color: @pink;
-          color: white;
-          padding: 1em 1.5em;
-          height: 30px;
-          text-decoration: none;
-          text-transform: uppercase;
-          box-shadow: 0px 0px 10px -2px @pink;
-        }
-      }
-    }
   }
   &.full {
     flex-direction: row;
-    section.pitches {
-      margin-top: 20%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+section.pitches {
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+  margin-top: 20%;
+  justify-content: center;
+  section.pitch-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    img {
+      width: 80%;
+      @media only screen and (max-width: 900px) {
+        width: 70%;
+        padding-bottom: 50px;
+      }
     }
-    section.pitch-img {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 45%;
-      img {
+  }
+  section.pitch-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+    article {
+      width: 90%;
+      @media only screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 80%;
       }
-    }
-    section.pitch-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 45%;
-      article {
-        width: 90%;
-        h3 {
-          margin-bottom: 0px;
-        }
-        p {
-          margin-top: 0px;
-          line-height: 2rem;
-        }
+      h3 {
+        margin-bottom: 0px;
       }
+      p {
+        margin-top: 0px;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+section.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .hero-img {
+    width: 75%;
+  }
+  .hero-text {
+    width: 75%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    text-align: center;
+    padding: 5rem 0;
+    p {
+      line-height: 2rem;
+      padding-bottom: 1.5rem;
+    }
+    a {
+      background-color: @pink;
+      color: white;
+      padding: 1em 1.5em;
+      height: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0px 0px 10px -2px @pink;
     }
   }
 }
