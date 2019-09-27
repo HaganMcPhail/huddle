@@ -21,7 +21,6 @@ body {
 }
 .bg-container {
   position: absolute;
-  overflow: hidden;
   z-index: 1;
   width: 100%;
   min-height: 150%;
@@ -31,11 +30,17 @@ body {
     overflow: hidden;
     &.colored-bg {
       transform: rotate(55deg);
-      height: 100%;
-      width: 80%;
+      height: 110%;
+      width: 90%;
+      top: -55%;
+      left: 40%;
+      @media only screen and (max-width: 900px) {
+        height: 100%;
+        width: 90%;
+        top: -50%;
+        left: 40%;
+      }
       background-color: @violet;
-      top: -40%;
-      left: 50%;
       z-index: 3;
       -webkit-animation: teeter 10s infinite linear;
       background-image: linear-gradient(to bottom, @pink, @violet);
@@ -44,11 +49,17 @@ body {
 
     &.white-bg {
       height: 100%;
-      width: 60%;
-      background-color: white;
-      transform: rotate(70deg);
-      top: 4%;
+      width: 80%;
+      top: 0%;
       left: 15%;
+      @media only screen and (max-width: 900px) {
+        height: 100%;
+        width: 110%;
+        top: -10%;
+      }
+      max-width: 900px;
+      background-color: white;
+      transform: rotate(80deg);
       z-index: 2;
       //-webkit-animation: teeter 10s infinite linear;
       box-shadow: 50px 35px 30px -50px @mid-gray;
