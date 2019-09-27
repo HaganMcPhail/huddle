@@ -157,7 +157,7 @@ main.full {
 section.pitches {
   display: flex;
   flex-direction: row;
-  margin-top: 20%;
+  margin: 25% 0 15% 0;
   justify-content: center;
 }
 @media only screen and (max-width: 900px) {
@@ -212,6 +212,19 @@ section.hero {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+section.hero .call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px 10px;
+  box-shadow: 0px 0px 20px -10px #808d99;
+  width: 70%;
+}
+section.hero .call-to-action .hero-text {
+  padding: 1.5rem 0 4rem 0;
 }
 section.hero .hero-img {
   width: 75%;
